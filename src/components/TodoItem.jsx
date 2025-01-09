@@ -7,7 +7,7 @@ function TodoItem({ todo }) {
     const {updateTodo, toggleComplete, deleteTodo} = useTodo()
 
     const editTodo = (e)=>{
-        updateTodo(todo.id,{...todo, todo: todo})
+        updateTodo(todo.id,{...todo, todo: todoMsg})
         setIsTodoEditable(false)
     }
 
@@ -22,7 +22,7 @@ function TodoItem({ todo }) {
         >
             <input
                 type="checkbox"
-                className="cursor-pointer"
+                className="cursor-pointer "
                 checked={todo.completed}
                 onChange={toggleCompleted}
             />
